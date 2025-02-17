@@ -5,10 +5,6 @@ Here's a breakdown of the commands with comments and rationale:
 # This removes previous build artifacts and creates a new artifact (e.g., JAR, WAR file).
 mvn clean package
 
-# 2. Gradle command to build the application as an executable jar
-# This command builds the Spring Boot application into an executable JAR file.
-./gradlew bootJar
-
 # 3. Docker build command to create an image for the backend service
 # This command builds a Docker image named 'ntier-backend' using the Dockerfile in the current directory.
 docker build -t ntier-backend .
