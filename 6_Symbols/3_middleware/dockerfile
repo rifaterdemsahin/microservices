@@ -1,0 +1,12 @@
+# Backend - Spring Boot Dockerfile
+FROM openjdk:17-jdk-slim
+WORKDIR /app
+
+# Copy the backend application JAR
+COPY target/NtierApplication.jar app.jar
+
+# Expose backend port
+EXPOSE 8080
+
+# Run the Spring Boot application
+CMD ["java", "-jar", "app.jar"]
