@@ -1,9 +1,9 @@
 version: '3.8'
 services:
   app:
-    build: 
-      context: .
-      dockerfile: ./3_middleware/dockerfile
+    build:
+      context: ./3_middleware
+      dockerfile: dockerfile
     container_name: middleware_app
     ports:
       - "8080:8080"
