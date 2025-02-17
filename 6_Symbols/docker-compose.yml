@@ -1,18 +1,20 @@
 version: '3.8'
 services:
   app:
-    build: ./3_middleware
+    build: 
+      context: .
+      dockerfile: ./3_middleware/dockerfile
     container_name: middleware_app
     ports:
       - "8080:8080"
     volumes:
-      - .:/app
+      - ./3_middleware:/app
     depends_on:
       - database
 
   database:
     image: mysql:latest
-    container_name: middleware_db
+    container_name: backend_db
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: mydb
