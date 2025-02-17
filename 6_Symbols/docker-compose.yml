@@ -7,8 +7,6 @@ services:
     container_name: middleware_app
     ports:
       - "8080:8080"
-    volumes:
-      - ./3_middleware:/app
     depends_on:
       - database
 

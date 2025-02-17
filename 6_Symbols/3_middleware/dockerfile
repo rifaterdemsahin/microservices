@@ -1,14 +1,14 @@
-# Backend - Spring Boot Dockerfile
 FROM openjdk:17-jdk-slim
+
+# Set working directory
 WORKDIR /app
 
-# Copy the backend application JAR
-# Change this to match the relative path within the container
-# Use the correct path relative to the build context
-COPY target/ntier-application-1.0-SNAPSHOT.jar app.jar
+# Copy the JAR file with absolute path
+COPY target/ntier-application-1.0-SNAPSHOT.jar /app/app.jar
 
-# Expose backend port
+# Verify the JAR exists (useful for debugging)
+RUN ls -la /app
+
+# Expose port and run application with absolute path
 EXPOSE 8080
-
-# Run the Spring Boot application
-CMD ["java", "-jar", "app.jar"]
+CMD ["java", "-jar", "/app/app.jar"]
