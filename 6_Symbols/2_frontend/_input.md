@@ -1,2 +1,1 @@
-   npm install
-   npm start
+inside docker they get installed over compose
