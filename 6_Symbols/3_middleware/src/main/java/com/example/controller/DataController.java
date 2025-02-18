@@ -9,7 +9,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = "*")  // Enable CORS for development
+@CrossOrigin(origins = "*")  // This is important for GitHub Codespaces
 public class DataController {
 
     @GetMapping("/data")
