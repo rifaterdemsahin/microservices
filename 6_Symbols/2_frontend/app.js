@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
         try {
             // When running in Docker, use the service name as the hostname
             // For local development, you might need to switch this back to localhost
-            const response = await fetch("http://app:8080/api/data");
+            const response = await fetch("/api/data");
             if (!response.ok) {
                 throw new Error("Network response was not ok");
             }
