@@ -5,6 +5,8 @@ services:
       context: ./3_middleware
       dockerfile: dockerfile
     container_name: middleware_app
+    ports:
+      - "8080:8080"  # Add this line
     networks:
       - app-network
     depends_on:
